@@ -112,7 +112,7 @@ def main():
             parser.error("No file specified.")
             return
         try:
-            input_file = open(parameters['file'], "r")
+            output_file = open(parameters['file'], "w")
         except OSError as err:
             parser.error(f"File {parameters['file']} can not be opened.")
         content = fetch(parameters['url'], parameters['id'], parameters['verbose'], parameters['silent'])
