@@ -38,7 +38,7 @@ def main():
 
     parameters = ChainMap({k:v for k,v in vars(args).items() if v is not None}, config)
 
-    if(parameters['url'] is not None):
+    if('url' in parameters):
         try:
             response = requests.head(parameters['url'])
         except requests.ConnectionError as e:
